@@ -1,4 +1,4 @@
-# Module 01 Mini-Project
+# Module 02 Mini-Project
 
 ## Description
 
