@@ -1,0 +1,137 @@
+/* ------------------------------------------------- */
+/* CSS variables and *selectors [CONFIDENT]*/
+:root {
+    --background-color: #333940;
+    --main-text: #c45ecb;
+    --secondary-text: #d0dad6;
+    --top-position: -28px;
+}
+
+* {
+    background-color: var(--background-color);
+    font-family: sans-serif;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+/* Header designs [CONFIDENT]*/
+header {
+    text-align: center;
+    margin: 5px;
+    border: #333940;
+}
+
+h1 {
+    color: var(--main-text);
+    font-size: xx-large;
+    padding: 5px;
+    margin: 20px 5px 5px 5px;
+}
+
+header p {
+    color: var(--secondary-text);
+    padding: 5px;
+    margin: 5px 8px 15px 8px;
+}
+/* ------------------------------------------------- */
+
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.main-box {
+    font-size: x-large;
+    color: var(--secondary-text);
+    padding: 10px;
+    border: 2px dashed var(--secondary-text);
+    margin: 15px 8px 15px 8px;
+}
+
+.main-box-header {
+    color: var(--main-text);
+    padding: 6px;
+    border: 1px solid var(--secondary-text);
+    border-radius: 5px;
+    position: relative;
+    top: var(--top-position);
+}
+
+.main-box-description {
+    font-size: small;
+    color: var(--main-text);
+    margin: 10px 0px 10px 0px;
+    position: relative;
+    top: var(--top-position);
+}
+
+.css-box {
+    border: 1px solid transparent;
+    border-radius: 8px;
+    background-image: linear-gradient(rgba(232, 102, 236, 0.3)0%, rgba(232, 102, 236, 0.6)100%);
+    position: relative;
+    top: var(--top-position);
+}
+
+pre {
+    background-color: transparent;
+    padding-left: 8px;
+}
+
+code {
+    font-size: smaller;
+    font-family: monospace;
+    text-wrap: wrap;
+    background-color: transparent;
+    user-select:all;
+}
+
+/* ------------------------------------------------- */
+/* Animation [CONFIDENT]*/
+.main-box:hover .main-box-header{
+    border-radius: 13px;
+    transition:all 0.2s ease-in-out;
+    box-shadow: inset 0px 0px 8px
+    rgba(232,102,236,1), 0 0 15px
+    rgba(232,102,236,1);
+}
+
+.main-box:hover .css-box{
+    border-radius: 13px;
+    transition:all 0.2s ease-in-out;
+    box-shadow: inset 0px 0px 8px
+    rgba(232,102,236,1), 0 0 15px
+    rgba(232,102,236,1);
+}
+
+.main-box:hover{
+    border-radius: 13px;
+    transition:all 0.2s ease-in-out;
+    box-shadow: inset 0px 0px 8px
+    rgba(232,102,236,1), 0 0 15px
+    rgba(232,102,236,1);
+}
+
+/* CSS footer [CONFIDENT]*/
+footer {
+    color: var(--main-text);
+    font-size: 25px;
+    text-align: center;
+    padding: 30px 10px 10px 10px;
+}
+
+/* Media Query */
+@media screen and (max-width:992px) {
+    main {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width:768px) {
+    main {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+/* ------------------------------------------------- */
